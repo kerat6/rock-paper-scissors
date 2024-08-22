@@ -4,7 +4,6 @@ console.log("Hello World");
 // receive a random number from 1-3
 // assign rock paper and scissors to each of these numbers as string value
 
-
 function getComputerChoice() {
 
     let compChoice = Math.floor(Math.random() * 3);
@@ -16,4 +15,6 @@ function getComputerChoice() {
     else console.log("scissors");
 }
 
-getComputerChoice();
+// function getHumanChoice
+// receive input from user through prompt
+// have function return user input to console
