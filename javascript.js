@@ -15,6 +15,16 @@ function getComputerChoice() {
     else console.log("scissors");
 }
 
+getComputerChoice();
+
 // function getHumanChoice
 // receive input from user through prompt
 // have function return user input to console
+
+function getHumanChoice() {
+    let playChoice = prompt("Would you like to choose rock, paper, or scissors?", "rock");
+    console.log(playChoice);
+
+}
+
+getHumanChoice();
