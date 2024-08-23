@@ -44,7 +44,7 @@ function getHumanChoice() {
 
     }
     else {
-        return alert("Please enter rock, paper, or scissors only.");
+        return alert("Please enter 'rock', 'paper', or 'scissors' only.");
     }
 
 }
@@ -58,14 +58,38 @@ function playRound() {
     compChoice = getComputerChoice();
     playChoice = getHumanChoice();
     if (playChoice === compChoice) {
-        console.log("It was a Tie! " + "Your Score: " + humanScore + " " + "Computer's score: " + computerScore);
+        console.log("Computer Chose rock");
+        console.log("It was a tie! " + "Your Score: " + humanScore + " " + "Computer's score: " + computerScore);
     }
     else if (playChoice === "rock" && compChoice === "scissors") {
-        humanScore++; console.log("You win! " + "Your Score: " + humanScore + " " + "Computer's score: " + computerScore);
+        humanScore++;
+        console.log("Computer Chose scissors");
+        console.log("You win! " + "Your Score: " + humanScore + " " + "Computer's score: " + computerScore);
     }
     else if (playChoice === "rock" && compChoice === "paper") {
         computerScore++;
-        console.log("You Lose! " + "Your Score: " + humanScore + " " + "Computer's score: " + computerScore);
+        console.log("Computer Chose Paper");
+        console.log("You lose! " + "Your Score: " + humanScore + " " + "Computer's score: " + computerScore);
+    }
+    else if (playChoice === "paper" && compChoice === "scissors") {
+        computerScore++;
+        console.log("Computer Chose scissors");
+        console.log("You lose! " + "Your Score: " + humanScore + " " + "Computer's score: " + computerScore);
+    }
+    else if (playChoice === "paper" && compChoice === "rock") {
+        humanScore++;
+        console.log("Computer Chose rock");
+        console.log("You win! " + "Your Score: " + humanScore + " " + "Computer's score: " + computerScore);
+    }
+    else if (playChoice === "scissors" && compChoice === "paper") {
+        humanScore++;
+        console.log("Computer Chose paper");
+        console.log("You win! " + "Your Score: " + humanScore + " " + "Computer's score: " + computerScore);
+    }
+    else if (playChoice === "scissors" && compChoice === "rock") {
+        computerScore++;
+        console.log("Computer Chose rock");
+        console.log("You lose! " + "Your Score: " + humanScore + " " + "Computer's score: " + computerScore);
     }
 }
 
