@@ -8,18 +8,17 @@ function getComputerChoice() {
     let compChoice = Math.floor(Math.random() * 3);
 
     if (compChoice == 0) {
-        console.log("rock");
         return "rock";
 
     }
     else if (compChoice === 1) {
 
-        console.log("paper");
+
         return "paper";
     }
     else {
 
-        console.log("scissors");
+
         return "scissors";
     }
 }
