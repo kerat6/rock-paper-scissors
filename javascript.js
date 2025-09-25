@@ -115,22 +115,24 @@ function playRound(playChoice) {
 // playGame();
 
 // adding event listeners to each button for player choice
-const buttons = document.querySelectorAll('button');
-buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-        const playChoice = button.id;
+const input = document.querySelectorAll('input');
+input.forEach((input) => {
+    input.addEventListener("click", () => {
+        const playChoice = input.id;
         const compChoice = getComputerChoice();
         console.log(playChoice);
         playRound(playChoice);
         if (humanScore == 5) {
             const gameWinDiv = document.createElement("div");
             gameWinDiv.textContent = "Congratulations! You've won the game!"
-            document.body.appendChild(gameWinDiv)
+           const divPlacement = document.querySelector("#container");
+            divPlacement.appendChild(gameWinDiv)
             disableButtons();
         } else if (computerScore == 5) {
             const gameLossDiv = document.createElement("div");
-            gameLossDiv.textContent = "Oh no! You've lost the game :("
-            document.body.appendChild(gameLossDiv)
+            gameLossDiv.textContent = "Oh no! You've lost the game :(";
+            const divPlacement = document.querySelector("#container");
+            divPlacement.appendChild(gameLossDiv);
             disableButtons();
 
         }
@@ -140,7 +142,7 @@ buttons.forEach((button) => {
 
 // function to disable buttons after game completion
 function disableButtons() {
-    buttons.forEach((button) => {
+    input.forEach((button) => {
         button.disabled = true
     })
 }
